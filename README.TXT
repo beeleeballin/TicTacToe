@@ -5,5 +5,5 @@ all he/she needs to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
 PROJECT TITLE: Tic Tac Toe
-PURPOSE OF PROJECT: play the game against a computer and see how many 
-you could win
+PURPOSE OF PROJECT: play the game of tic tac toe against the computer 
+and see how many you could win
