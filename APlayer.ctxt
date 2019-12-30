@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=APlayer
+comment1.params=
+comment1.target=APlayer()
+comment2.params=g\ player
+comment2.target=APlayer(Game,\ char)
+comment3.params=
+comment3.target=char\ getSymbol()
+comment4.params=
+comment4.target=Move\ pickMove()
+numComments=5

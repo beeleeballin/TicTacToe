@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=GameStats
+comment1.params=
+comment1.target=GameStats()
+comment2.params=
+comment2.target=void\ recordLoss()
+comment3.params=
+comment3.target=void\ recordTie()
+comment4.params=
+comment4.target=void\ recordWin()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CpuPlayer
+comment1.params=g\ player
+comment1.target=CpuPlayer(Game,\ char)
+comment2.params=
+comment2.target=Move\ pickMove()
+numComments=3
