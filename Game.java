@@ -20,24 +20,24 @@ public class Game
     public char isValidMove(Move move){ //checks whether the move is within bounds or unoccupied
         if ((move.row >= boardSize)||(move.row < 0)) return 'R';
         else if ((move.col >= boardSize)||(move.col < 0)) return 'C';
-        else if (board[move.row][move.col] != ' ') return 'O';
+        else if (board[move.row][move.col] != SYMBOL_BLANK) return 'O';
         else return 'V';
     }
     protected boolean executeMove(Move move, char symbol){ //place the player symbol in the board matrix
         if(isValidMove(move) == 'V'){
-            board[move.row][move.col]=symbol;
+            board[move.row][move.col] = symbol;
             return true;
         }else return false;
     }
     public char getGameStatus(){ //'X', 'O', 'T', '?'
         for(int i=0; i<boardSize; i++){ //check horizontal
-            for(int j=0; j<boardSize; j++){
+            for(int j=1; j<boardSize; j++){
                 if(board[i][0] != board[i][j]) break;
                 if((j+1) == boardSize) return board[i][0];
             }
         }
         for(int i=0; i<boardSize; i++){ //check vertical
-            for(int j=0; j<boardSize; j++){
+            for(int j=1; j<boardSize; j++){
                 if(board[0][i] != board[j][i]) break;
                 if((j+1) == boardSize) return board[0][i];
             }
@@ -61,6 +61,7 @@ public class Game
     public char playSingleGame(){
         char res = 'q';
         int turn = (int)(2*Math.random());
+        System.out.println(turn);
         while (res != 'Q'){
             if(turn % 2 == 1) {
                 if (executeMove(players[1].pickMove(),SYMBOL_CPU)){
