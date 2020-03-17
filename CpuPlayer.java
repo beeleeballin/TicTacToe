@@ -1,5 +1,6 @@
 public class CpuPlayer extends APlayer
 {
+    char SYMBOL_BLANK = ' ';
     public CpuPlayer(Game g, char player)
     {
         game = g;
@@ -11,7 +12,7 @@ public class CpuPlayer extends APlayer
         do{
             move.row = (int)(Math.random()*game.boardSize);
             move.col = (int)(Math.random()*game.boardSize);
-        }while(game.board[move.row][move.col] != ' ');
+        }while(game.board[move.row][move.col] != SYMBOL_BLANK);
         return move;
     }
 }

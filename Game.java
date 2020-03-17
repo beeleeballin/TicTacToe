@@ -61,7 +61,8 @@ public class Game
     public char playSingleGame(){
         char res = 'q';
         int turn = (int)(2*Math.random());
-        System.out.println(turn);
+        if(turn % 2 == 1) System.out.println("CPU goes first");
+        else System.out.println("PLAYER goes first");
         while (res != 'Q'){
             if(turn % 2 == 1) {
                 if (executeMove(players[1].pickMove(),SYMBOL_CPU)){
@@ -119,20 +120,20 @@ public class Game
         }
         return boardString;
     }
-    public static void testresult(String[] args){
-        Game now = new Game(3);
-        now.board[0][0]= now.SYMBOL_BLANK;
-        now.board[0][1]='O';
-        now.board[0][2]='O';
-        now.board[1][0]= now.SYMBOL_BLANK;
-        now.board[1][1]='X';
-        now.board[1][2]='X';
-        now.board[2][0]='O';
-        now.board[2][1]='O';
-        now.board[2][2]='X';
+    // public static void testresult(String[] args){
+        // Game now = new Game(3);
+        // now.board[0][0]= now.SYMBOL_BLANK;
+        // now.board[0][1]='O';
+        // now.board[0][2]='O';
+        // now.board[1][0]= now.SYMBOL_BLANK;
+        // now.board[1][1]='X';
+        // now.board[1][2]='X';
+        // now.board[2][0]='O';
+        // now.board[2][1]='O';
+        // now.board[2][2]='X';
         
-        System.out.println(now.getGameStatus());
-    }
+        // System.out.println(now.getGameStatus());
+    // }
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
@@ -140,8 +141,8 @@ public class Game
         GameStats gs = new GameStats();
         int bs = 0;
         boolean notquit = true;
-        System.out.println("Hello! Welcome to tic-tac-toe");
-        System.out.println("How large would you like your playing board?");
+        System.out.println("Hello! Welcome to Brian's Tic-Tac-Toe game");
+        System.out.println("How large would you like your playing board?\nInsert a number, and we'll make a grid with those dimensions");
         try{
             bs = scanner.nextInt();
         }catch(java.util.InputMismatchException e){

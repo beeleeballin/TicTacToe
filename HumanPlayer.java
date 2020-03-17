@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class HumanPlayer extends APlayer
 {
+    char SYMBOL_BLANK = ' ';
     public HumanPlayer(Game g, char player)
     {
         game = g;
@@ -31,7 +32,7 @@ public class HumanPlayer extends APlayer
             if((row >= game.boardSize)||(row < 0)||(col >= game.boardSize)||(col < 0)){
                 System.out.println("The move is out of bounds. Please choose another one.");
                 continue;
-            }else if(game.board[row][col] != ' '){
+            }else if(game.board[row][col] != SYMBOL_BLANK){
                 System.out.println("The position is already taken. Please choose another one.");
                 continue;
             }else{

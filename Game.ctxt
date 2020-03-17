@@ -2,8 +2,6 @@
 comment0.target=Game
 comment1.params=bs
 comment1.target=Game(int)
-comment10.params=args
-comment10.target=void\ main(java.lang.String[])
 comment2.params=
 comment2.target=int\ getBoardSize()
 comment3.params=move
@@ -19,5 +17,5 @@ comment7.target=void\ resetGame()
 comment8.params=
 comment8.target=java.lang.String\ toString()
 comment9.params=args
-comment9.target=void\ testresult(java.lang.String[])
-numComments=11
+comment9.target=void\ main(java.lang.String[])
+numComments=10
